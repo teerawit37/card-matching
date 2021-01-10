@@ -1,5 +1,3 @@
-import { deflate } from "zlib"
-
 import classes from './style.module.scss'
 
 const Header = ({children}) => (

@@ -9,7 +9,8 @@ import initializeDeck from '~/components/deck'
 
 import styles from './style.module.scss'
 
-function App({ dispatch, bestScore, globalScore }) {
+
+const MainApp = ({ dispatch, bestScore, globalScore }) => {
   const [cards, setCards] = useState<any>([])
   const [flipped, setFlipped] = useState<any>([])
   const [dimension, setDimension] = useState<number>(400)
@@ -119,4 +120,4 @@ const mapStateToProps = (state, dispatch) => ({
   globalScore: state.score.globalBestScore,
   dispatch
 });
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(MainApp);

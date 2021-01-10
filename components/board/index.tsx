@@ -1,10 +1,24 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Card from '~/components/card'
 
 import styles from './style.module.scss'
 
-export default function Board({ dimension, cards, flipped, handleClick, disabled, solved }) {
+
+interface cards{
+    id: number;
+    type: string;
+  }
+  
+type Props = {
+    dimension: number, 
+    cards: cards[], 
+    flipped: number[], 
+    handleClick: (id: number) => void, 
+    disabled: boolean, 
+    solved: number[]
+}
+
+const Board = ({ dimension, cards, flipped, handleClick, disabled, solved }: Props) => {
     return (
         <div className={styles.board}>
             {
@@ -25,12 +39,4 @@ export default function Board({ dimension, cards, flipped, handleClick, disabled
         </div>
     )
 }
-
-Board.propTypes = {
-    disabled: PropTypes.bool.isRequired,
-    dimension: PropTypes.number.isRequired,
-    cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-    flipped: PropTypes.arrayOf(PropTypes.number).isRequired,
-    handleClick: PropTypes.func.isRequired,
-    solved: PropTypes.arrayOf(PropTypes.number).isRequired
-}
+export default Board;

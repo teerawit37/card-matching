@@ -1,9 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Button from '~/components/button'
 import styles from './style.module.scss';
 
-export default function GameControl({ click, bestScore, globalScore, handleClickReset, isWin }) {
+type Props = {
+    click: number,
+    bestScore: number,
+    globalScore: number,
+    handleClickReset: () => void,
+    isWin: boolean
+}
+
+const GameControl = ({ click, bestScore, globalScore, handleClickReset, isWin }: Props) => {
     return (
         <div className={styles.gameControl}>
             <div className={styles.scoreBoard}>
@@ -20,12 +27,5 @@ export default function GameControl({ click, bestScore, globalScore, handleClick
 
     )
 }
+export default GameControl
 
-
-GameControl.propTypes = {
-    click: PropTypes.number.isRequired,
-    bestScore: PropTypes.number.isRequired,
-    globalScore: PropTypes.number.isRequired,
-    handleClickReset: PropTypes.func.isRequired,
-    isWin: PropTypes.bool.isRequired
-}
