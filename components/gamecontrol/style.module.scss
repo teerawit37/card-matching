@@ -1,0 +1,31 @@
+
+$small: 300px;
+$medium: 900px;
+.gameControl {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media screen and (max-width: $small) {
+        width: 300px;
+    }
+    @media screen and (min-width: $medium) {
+        width: 750px;
+    }
+    .scoreBoard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        background-color: black;
+        padding: 10px;
+        line-height: 30px;
+        color: white;
+        @media screen and (max-width: $small) {
+            font-size: 8px;
+        }
+          @media screen and (min-width: $medium) {
+            font-size: 16px;
+        }
+    }
+}

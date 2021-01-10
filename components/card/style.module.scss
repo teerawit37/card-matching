@@ -1,0 +1,12 @@
+.cardcontainer {
+    display: inline-block;
+    border: 2px solid white;
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        font-size: 32px;
+    }
+}
