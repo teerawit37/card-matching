@@ -25,7 +25,7 @@ const MainApp = ({ dispatch, bestScore, globalScore }) => {
 
   useEffect(() => {
     if (solved.length === 12) {
-       isWin()
+      isWin()
     }
   }, [solved])
 
@@ -34,7 +34,7 @@ const MainApp = ({ dispatch, bestScore, globalScore }) => {
     return () => window.removeEventListener('resize', resizeListener)
   })
 
-  const handleClick = (id) => {
+  const handleClick = (id: number) => {
     setScore(score + 1)
     setDisabled(true)
     if (flipped.length === 0) {
@@ -75,7 +75,7 @@ const MainApp = ({ dispatch, bestScore, globalScore }) => {
     setCards(initializeDeck())
     setScore(0)
   }
-  const isMatch: any = (id) => {
+  const isMatch: any = (id: number) => {
     const clickedCard = cards.find(card => card.id === id)
     const flippedCard = cards.find(card => flipped[0] === card.id)
     return flippedCard.type === clickedCard.type
@@ -92,7 +92,7 @@ const MainApp = ({ dispatch, bestScore, globalScore }) => {
   }
 
   return (
-    <div className={styles.HomePage}>
+    <div className={styles.MainPage}>
       <Header>Card Matching challenge</Header>
       <div className={styles.container}>
         <GameControl

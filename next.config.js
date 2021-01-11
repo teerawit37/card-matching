@@ -26,6 +26,6 @@ const withTsconfigPaths = (nextConfig = {}) => ({
 
 module.exports = withTsconfigPaths(
     withSass({
-        cssModules: true
+        cssModules: true,
     })
 )
