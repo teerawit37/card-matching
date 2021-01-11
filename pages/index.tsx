@@ -103,7 +103,7 @@ const MainApp = ({ dispatch, bestScore, globalScore }) => {
           isWin={solved.length === 12}
         />
         <Board
-          dimension={dimension}
+          dimension={dimension > 770 ? 770 : dimension}
           cards={cards}
           flipped={flipped}
           handleClick={handleClick}
