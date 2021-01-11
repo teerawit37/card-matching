@@ -4,23 +4,23 @@ const TSconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const withTsconfigPaths = (nextConfig = {}) => ({
     ...nextConfig,
     ...{
-       webpack(config, options) {
-           const newConfig = {
-               ...config,
-               resolve: {
-                   ...config.resolve,
-                   plugins: [
-                     ...(config.resolve && config.resolve.plugins),
-                     new TSconfigPathsPlugin(),
-                   ]
-               }
-           }
-           if(typeof newConfig.webpack === 'function'){
-               return nextConfig.webpack(newConfig, options)
-           }
+        webpack(config, options) {
+            const newConfig = {
+                ...config,
+                resolve: {
+                    ...config.resolve,
+                    plugins: [
+                        ...(config.resolve && config.resolve.plugins),
+                        new TSconfigPathsPlugin(),
+                    ]
+                }
+            }
+            if (typeof newConfig.webpack === 'function') {
+                return nextConfig.webpack(newConfig, options)
+            }
 
-           return newConfig
-       }
+            return newConfig
+        }
     }
 })
 
