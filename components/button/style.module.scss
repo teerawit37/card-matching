@@ -1,6 +1,7 @@
+@import '~/styles/variables.scss';
   .pixel {
     font-size: 10px;
-    color: white;
+    color: $color-secondary;
     height: auto;
     margin: 10px;
     font-family: 'Press Start 2P', cursive;

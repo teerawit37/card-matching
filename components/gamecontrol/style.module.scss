@@ -1,13 +1,18 @@
-
-$small: 300px;
-$medium: 900px;
+@import '~/styles/variables.scss';
 .gameControl {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 75%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 20px);
     @media (min-width: $medium) {
-        width: 750px;
+        width: 710px;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    @media (min-width: $large) {
+        width: 740px;
     }
     .scoreBoard {
         display: flex;
@@ -15,10 +20,10 @@ $medium: 900px;
         justify-content: center;
         align-items: flex-start;
         width: 100%;
-        background-color: black;
+        background-color: $color-primary;
         padding: 10px;
         line-height: 30px;
-        color: white;
+        color: $color-secondary;
         font-size: 12px;
           @media (min-width: $medium) {
             font-size: 16px;

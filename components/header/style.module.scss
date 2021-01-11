@@ -1,9 +1,11 @@
+@import '~/styles/variables.scss';
+
 .Header {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: $color-secondary;
     height: 80px;
-    background-color: black;
+    background-color: $color-primary;
     margin-bottom: 20px;
 }

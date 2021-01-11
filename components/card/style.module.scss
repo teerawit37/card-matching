@@ -1,12 +1,14 @@
+@import '~/styles/variables.scss';
+
 .cardcontainer {
     display: inline-block;
-    border: 2px solid white;
+    border: 2px solid $color-secondary;
     .card {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: black;
-        color: white;
+        background-color: $color-primary;
+        color: $color-secondary;
         font-size: 32px;
     }
 }
