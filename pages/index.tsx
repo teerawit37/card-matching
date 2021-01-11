@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
-import Header from '~/components/header'
 import { connect } from 'react-redux'
 import { setNewScore, setNewGlobalScore } from "~/store/actions/scoreAction";
 import Board from '~/components/board'
 import GameControl from '~/components/gamecontrol'
-import initializeDeck from '~/components/deck'
+import Layout from '~/components/layout'
+import initializeDeck from '~/helpers/deck'
 
 import styles from './style.module.scss'
 
@@ -92,8 +92,8 @@ const MainApp = ({ dispatch, bestScore, globalScore }) => {
   }
 
   return (
+    <Layout>
     <div className={styles.MainPage}>
-      <Header>Card Matching challenge</Header>
       <div className={styles.container}>
         <GameControl
           click={score}
@@ -112,6 +112,7 @@ const MainApp = ({ dispatch, bestScore, globalScore }) => {
         />
       </div>
     </div>
+    </Layout>
   )
 }
 

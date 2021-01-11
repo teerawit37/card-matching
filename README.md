@@ -1,4 +1,4 @@
-# Card Matching Game with NextJS (TypeScript) 
+# Card Matching Challenge with NextJS (TypeScript) 
 
 This is a Frontend Typescript Project using:
 * NextJS (TypeScript)
