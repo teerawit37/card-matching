@@ -19,7 +19,7 @@ const Card = ({ handleClick, id, flipped, type, height, width, disabled, solved 
             style={{
                 width, height
             }}
-            onClick={() => disabled ? null : handleClick(id)}
+            onClick={() => disabled || flipped ? null : handleClick(id)}
         >
             <div
                 style={{
