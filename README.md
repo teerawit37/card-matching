@@ -11,7 +11,9 @@ This is a Frontend Typescript Project using:
 
 ## Getting Started
 
-install the dependencies and start the development server.
+1. clone `https://github.com/teerawit37/card-matching.git`
+
+2. install the dependencies and start the development server.
 
 ```bash
 npm install
