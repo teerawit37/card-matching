@@ -45,7 +45,7 @@ After building, the start script starts a Node.js server that supports hybrid pa
 npm run start
 ```
 
-<b>if you want static file<b>
+<b>If you want static file, run the deploy script once, which builds the production application in the out folder.<b>
 
 ```bash
 npm run deploy
