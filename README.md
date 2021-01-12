@@ -16,6 +16,8 @@ This is a Frontend Typescript Project using:
 2. install the dependencies and start the development server.
 
 ```bash
+cd card-matching
+
 npm install
 npm run dev
 # or
