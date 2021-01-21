@@ -95,6 +95,7 @@ const MainApp = ({ dispatch, bestScore, globalScore }) => {
     <Layout>
     <div className={styles.MainPage}>
       <div className={styles.container}>
+        <div>test</div>
         <GameControl
           click={score}
           bestScore={bestScore}
